@@ -1,17 +1,17 @@
 //Testing...
 console.log("Hello World");
-
+const prompt=require("prompt-sync")({sigint:true});
 // Declaring global variables
 let username, password, role;
 
 // Login 
 function login() {
-  username = ("Enter your username:");
-  password = ("Enter your password:");
-  role = ("Enter your role:");
+  username = prompt("Enter your username:");
+  password = prompt("Enter your password:");
+  role = prompt("Enter your role:");
 
   if (!username || !password || !role) {
-    ("Input should not be empty. Please try again.");
+    prompt("Input should not be empty. Please try again.");
   } else {
     let message;
 
@@ -29,7 +29,7 @@ function login() {
         message = "Role out of range.";
     }
 
-   (message);
+   prompt(message);
   }
 }
 
